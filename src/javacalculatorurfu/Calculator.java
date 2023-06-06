@@ -16,5 +16,23 @@ public class Calculator {
         a = sc.nextDouble();
         b = sc.nextDouble();
 
+        System.out.println("a = " +a+ " b = " +b);
+
+        System.out.println("Enter the operator (+,-,*,/):");
+
+        char operator = sc.next().charAt(0);
+        double result = 0.0;
+
+        switch (operator) {
+            case '+':
+                result = a + b;
+                break;
+
+            default:
+                System.out.println("Wrong input");
+        }
+
+        System.out.println("The final result:");
+        System.out.println(a + " " + operator + " " + b + " = " + result);
     }
 }
