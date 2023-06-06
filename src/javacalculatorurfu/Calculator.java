@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
 
-        double a = 0.0;
-        double b = 0.0;
+        Double a = 0.0;
+        Double b = 0.0;
 
         Scanner sc = new Scanner(System.in);
 
@@ -20,19 +20,39 @@ public class Calculator {
 
         System.out.println("Enter the operator (+,-,*,/):");
 
-        char operator = sc.next().charAt(0);
-        double result = 0.0;
+        Character operator = sc.next().charAt(0);
+        Double result = null;
 
         switch (operator) {
             case '+':
                 result = a + b;
                 break;
 
+            case '-':
+                result = a - b;
+                break;
+
+            case '*':
+                result = a * b;
+                break;
+
+            case '/':
+                if (b == null && b != 0.0) {
+                    result = a / b;
+                } else {
+                    System.out.println("Divide to zero! Change b number!");
+                }
+                break;
+
             default:
                 System.out.println("Wrong input");
         }
 
-        System.out.println("The final result:");
-        System.out.println(a + " " + operator + " " + b + " = " + result);
+        if(result == null){
+            System.out.println("Something went wrong");
+        } else {
+            System.out.println("The final result:");
+            System.out.println(a + " " + operator + " " + b + " = " + result);
+        }
     }
 }
