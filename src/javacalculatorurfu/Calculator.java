@@ -22,5 +22,19 @@ public class Calculator {
 
         Character operator = sc.next().charAt(0);
         Double result = null;
+
+        switch (operator) {
+            case '*':
+                System.out.println(a * b);
+            case '/':
+                try {
+                    System.out.println(a / b);
+                } catch (ArithmeticException e) {
+                    System.out.println("division by zero");
+                }
+
+            default:
+                System.out.println("error operator");
+        }
     }
 }
