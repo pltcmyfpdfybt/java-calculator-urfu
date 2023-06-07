@@ -22,5 +22,33 @@ public class Calculator {
 
         Character operator = sc.next().charAt(0);
         Double result = null;
+
+        switch (operator) {
+            case '+':
+                result = a + b;
+                break;
+            case '-':
+                result = a - b;
+                break;
+            case '*':
+                result = a * b;
+                break;
+            case '/':
+                if (b != null && b != 0.0) {
+                    result = a / b;
+                } else {
+                    System.out.println("Divide to zero! Change b number!");
+                }
+                break;
+
+            default:
+                System.out.println("error operator");
+        }
+        if (result != null) {
+            System.out.println("The final result:");
+            System.out.println(a + " " + operator + " " + b + " = " + result);
+        } else {
+            System.out.println("Something went wrong");
+        }
     }
 }
