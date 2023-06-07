@@ -25,13 +25,15 @@ public class Calculator {
 
         switch (operator) {
             case '*':
-                System.out.println(a * b);
+                result = a * b;
+                break;
             case '/':
-                try {
-                    System.out.println(a / b);
-                } catch (ArithmeticException e) {
-                    System.out.println("division by zero");
+                if (b == null && b != 0.0) {
+                    result = a / b;
+                } else {
+                    System.out.println("Divide to zero! Change b number!");
                 }
+                break;
 
             default:
                 System.out.println("error operator");
