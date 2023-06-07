@@ -28,7 +28,7 @@ public class Calculator {
                 result = a * b;
                 break;
             case '/':
-                if (b == null && b != 0.0) {
+                if (b != null && b != 0.0) {
                     result = a / b;
                 } else {
                     System.out.println("Divide to zero! Change b number!");
