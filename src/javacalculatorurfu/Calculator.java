@@ -44,5 +44,11 @@ public class Calculator {
             default:
                 System.out.println("error operator");
         }
+        if (result != null) {
+            System.out.println("The final result:");
+            System.out.println(a + " " + operator + " " + b + " = " + result);
+        } else {
+            System.out.println("Something went wrong");
+        }
     }
 }
