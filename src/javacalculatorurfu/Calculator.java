@@ -24,6 +24,12 @@ public class Calculator {
         Double result = null;
 
         switch (operator) {
+            case '+':
+                result = a + b;
+                break;
+            case '-':
+                result = a - b;
+                break;
             case '*':
                 result = a * b;
                 break;
