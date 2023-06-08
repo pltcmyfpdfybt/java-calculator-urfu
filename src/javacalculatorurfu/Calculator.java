@@ -30,6 +30,8 @@ public class Calculator {
             case '-':
                 result = a - b;
                 break;
+            case "!":
+                result = a*(a-1)* (a -2);
             case '*':
                 result = a * b;
                 break;
@@ -52,3 +54,4 @@ public class Calculator {
         }
     }
 }
+//тестик
